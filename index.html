@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="pokedex">
+
+        <div class="head__pokedex">
+            <div class="square__big"></div>
+            <div class="square__small"></div>
+        </div>
+
+        <div class="text__search">
+            <h1>Pokédex</h1>
+            <p>Digite o nome ou número de um pokemon</p>
+            <input type="text" name="pokemon__input" id="pokemon__input" placeholder="ex: Pikachu ou 25">
+            <button class="button__pokedex" onclick="getPokemon()">Buscar</button>
+        </div>
+        
+        <div id="pokemonCard"></div>
+
+    </section>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
