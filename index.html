@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="pokedex">
 
         <div class="head__pokedex">
-            <div class="square__big"></div>
+            <div class="square__big"><img src="img/button-black.png" alt="esfera preta"></div>
             <div class="square__small"></div>
         </div>
 
         <div class="text__search">
             <h1>Pokédex</h1>
-            <p>Digite o nome ou número de um pokemon</p>
-            <input type="text" name="pokemon__input" id="pokemon__input" placeholder="ex: Pikachu ou 25">
-            <button class="button__pokedex" onclick="getPokemon()">Buscar</button>
+            <input type="text" name="pokemon__input" id="pokemon__input" placeholder="Busca por nome ou número">
+            <button class="button__pokedex" onclick="getPokemon()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         
         <div id="pokemonCard"></div>

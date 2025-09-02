@@ -1,4 +1,8 @@
- async function getPokemon() {
+const btnHead = document.querySelector('.square__big')
+
+
+
+async function getPokemon() {
       const input = document.getElementById("pokemon__input").value.toLowerCase();
       const url = `https://pokeapi.co/api/v2/pokemon/${input}`;
       const speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${input}`;
@@ -28,6 +32,8 @@
 
         const description = descriptionEntry ? descriptionEntry.flavor_text.replace(/\n|\f/g, " ") : "Descrição não encontrada";
 
+
+        btnHead.innerHTML = `<img src="img/button-blue.png" alt="esfera azul">`
         document.getElementById("pokemonCard").innerHTML = `
           <div class="card">
             <h2>${data.name.toUpperCase()} (#${data.id})</h2>
@@ -44,5 +50,6 @@
         `;
       } catch (err) {
         document.getElementById("pokemonCard").innerHTML = `<p style="color:red;">${err.message}</p>`;
+        btnHead.innerHTML = `<img src="img/button-red.png" alt="esfera vermelha">`
       }
     }
